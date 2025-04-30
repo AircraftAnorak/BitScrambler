@@ -1,6 +1,7 @@
 //
 // Bit Scrambler Example
 // Caspar B P 2025
+// M0KRH
 /*
 
 This example is basic code to implement the 
@@ -10,7 +11,7 @@ bit register and applies an algorithm to
 scramble and descramble the data that I
 have put together
 
-Please see my GitHub for a more detailed explaination
+Please see my GitHub for a more detailed explanation
 
 */
 
@@ -30,7 +31,7 @@ byte bit_input = 0;
 // Output of first XOR into register
 byte bit0 = 0;
 
-// Polynomial bits of scrambler register
+// Polynomial bits of the scrambler register
 byte bit_xor = 0;
 // 12th bit
 byte bit11 = 0;
@@ -109,7 +110,7 @@ void setup() {
 
     bit_register = (bit_register << 1) + bit0;
 
-    // For this algorithm, output is XOR of the input and 12th + 17th bits
+    // For this algorithm, output is XOR of the input and the 12th + 17th bits
     output = (output << 1) + (bit_input^bit_xor);
 
   }
